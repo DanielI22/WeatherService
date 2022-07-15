@@ -1,4 +1,4 @@
-package com.example.springtest.config;
+package com.example.springtest.configs;
 
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.builders.PathSelectors;
