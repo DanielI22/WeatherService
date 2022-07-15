@@ -1,4 +1,4 @@
-package com.example.springtest.New.Data.DB.Entity;
+package com.example.springtest.data.db.Entity;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -12,12 +12,11 @@ import java.util.Set;
 @Getter
 @Setter(AccessLevel.PRIVATE)
 @NoArgsConstructor
-public class Type {
+public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String typeName;
-
-    @OneToMany(mappedBy = "type")
+    private String name;
+    @OneToMany(mappedBy = "country")
     private Set<Place> places;
 }

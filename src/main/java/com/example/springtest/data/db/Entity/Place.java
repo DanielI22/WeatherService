@@ -1,4 +1,4 @@
-package com.example.springtest.New.Data.DB.Entity;
+package com.example.springtest.data.db.Entity;
 
 import lombok.AccessLevel;
 import lombok.Getter;

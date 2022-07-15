@@ -1,4 +1,4 @@
-package com.example.springtest.New.API.Model;
+package com.example.springtest.api.Model;
 
 import lombok.AccessLevel;
 import lombok.Getter;

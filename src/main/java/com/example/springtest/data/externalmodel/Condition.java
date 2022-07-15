@@ -1,4 +1,4 @@
-package com.example.springtest.New.Data.ExternalModel;
+package com.example.springtest.data.externalmodel;
 
 import lombok.AccessLevel;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.example.springtest.New.Domain.Interface;
+package com.example.springtest.domain.interfaces;
 
 import org.springframework.web.client.RestTemplate;
 

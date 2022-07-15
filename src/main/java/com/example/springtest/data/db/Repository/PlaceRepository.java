@@ -1,6 +1,6 @@
-package com.example.springtest.New.Data.DB.Repository;
+package com.example.springtest.data.db.Repository;
 
-import com.example.springtest.New.Data.DB.Entity.Place;
+import com.example.springtest.data.db.Entity.Place;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

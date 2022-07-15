@@ -1,7 +1,7 @@
-package com.example.springtest.New.API.Controller;
+package com.example.springtest.api.Controller;
 
-import com.example.springtest.New.API.Model.WeatherRequest;
-import com.example.springtest.New.Domain.Interface.WeatherService;
+import com.example.springtest.api.Model.WeatherRequest;
+import com.example.springtest.domain.interfaces.WeatherService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

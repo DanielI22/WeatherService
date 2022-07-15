@@ -1,12 +1,12 @@
-package com.example.springtest.New.Domain.Implementation;
+package com.example.springtest.domain.implementation;
 
-import com.example.springtest.New.API.Model.WeatherResponse;
-import com.example.springtest.New.Data.DB.Entity.Place;
-import com.example.springtest.New.Data.DB.Repository.PlaceRepository;
-import com.example.springtest.New.Data.ExternalModel.WeatherAPIResponse;
-import com.example.springtest.New.Domain.Interface.RestTemplateProvider;
-import com.example.springtest.New.Domain.Interface.WeatherService;
-import com.example.springtest.New.Exception.LocationNotFoundException;
+import com.example.springtest.api.Model.WeatherResponse;
+import com.example.springtest.data.db.Entity.Place;
+import com.example.springtest.data.db.Repository.PlaceRepository;
+import com.example.springtest.data.externalmodel.WeatherAPIResponse;
+import com.example.springtest.domain.interfaces.RestTemplateProvider;
+import com.example.springtest.domain.interfaces.WeatherService;
+import com.example.springtest.data.exception.LocationNotFoundException;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 

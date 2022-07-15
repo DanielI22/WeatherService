@@ -1,6 +1,6 @@
-package com.example.springtest.New.Domain.Implementation;
+package com.example.springtest.domain.implementation;
 
-import com.example.springtest.New.Domain.Interface.RestTemplateProvider;
+import com.example.springtest.domain.interfaces.RestTemplateProvider;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
