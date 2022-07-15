@@ -1,16 +1,13 @@
 package com.example.springtest.data.db.Entity;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Getter
-@Setter(AccessLevel.PRIVATE)
+@Setter
 @NoArgsConstructor
 public class Type {
     @Id

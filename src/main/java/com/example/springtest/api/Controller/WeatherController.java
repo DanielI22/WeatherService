@@ -4,6 +4,7 @@ import com.example.springtest.api.Model.WeatherRequest;
 import com.example.springtest.domain.interfaces.WeatherService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
