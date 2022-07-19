@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 public class Place {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -9,6 +9,7 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
+
 public class Type {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -7,7 +7,7 @@ import com.example.springtest.data.db.Entity.Type;
 import com.example.springtest.data.db.Repository.CountryRepository;
 import com.example.springtest.data.db.Repository.PlaceRepository;
 import com.example.springtest.data.db.Repository.TypeRepository;
-import com.example.springtest.data.exception.LocationNotFoundException;
+import com.example.springtest.data.exception.PlaceNotFoundException;
 import com.example.springtest.domain.interfaces.PlaceUpdateService;
 import org.springframework.stereotype.Service;
 
@@ -29,10 +29,10 @@ public class PlaceUpdateServiceImpl implements PlaceUpdateService {
     public void updatePlace(Long id, PlacePutRequest placePutRequest) {
         Optional<Place> place = placeRepository.findById(id);
         if(place.isEmpty()) {
-            throw new LocationNotFoundException();
+            throw new PlaceNotFoundException();
         }
 
-        if(!countryRepository.existsByName(placePutRequest.getCountryName())) {
+        if(countryRepository.existsByName(placePutRequest.getCountryName())) {
             Country country = new Country();
             country.setName(placePutRequest.getCountryName());
             countryRepository.save(country);

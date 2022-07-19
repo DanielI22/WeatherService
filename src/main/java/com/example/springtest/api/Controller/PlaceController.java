@@ -2,11 +2,11 @@ package com.example.springtest.api.Controller;
 
 import com.example.springtest.api.Model.PlaceCreateRequest;
 import com.example.springtest.api.Model.PlacePutRequest;
-import com.example.springtest.domain.interfaces.PlaceCreateService;
-import com.example.springtest.domain.interfaces.PlaceDeleteService;
-import com.example.springtest.domain.interfaces.PlaceReadService;
-import com.example.springtest.domain.interfaces.PlaceUpdateService;
+import com.example.springtest.domain.interfaces.*;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 public class PlaceController {
@@ -15,15 +15,17 @@ public class PlaceController {
     private final PlaceReadService placeReadService;
     private final PlaceUpdateService placeUpdateService;
     private final PlaceDeleteService placeDeleteService;
+    private final PlaceFindService placeFindService;
 
-    public PlaceController(PlaceCreateService placeCreateService, PlaceReadService placeReadService, PlaceUpdateService placeUpdateService, PlaceDeleteService placeDeleteService) {
+    public PlaceController(PlaceCreateService placeCreateService, PlaceReadService placeReadService, PlaceUpdateService placeUpdateService, PlaceDeleteService placeDeleteService, PlaceFindService placeFindService) {
         this.placeCreateService = placeCreateService;
         this.placeReadService = placeReadService;
         this.placeUpdateService = placeUpdateService;
         this.placeDeleteService = placeDeleteService;
+        this.placeFindService = placeFindService;
     }
 
-    @PostMapping("/place-create")
+    @PostMapping("/place/")
     public Long createPlace(@RequestBody PlaceCreateRequest placeRequest) {
         return placeCreateService.getCreateResponse(placeRequest).getId();
     }
@@ -31,6 +33,11 @@ public class PlaceController {
     @GetMapping("/place/")
     public String getPlace(@RequestParam Long id) {
         return placeReadService.getPlace(id).toString();
+    }
+
+    @GetMapping("/place/find")
+    public String findPlace(@RequestParam String placeName) {
+        return placeFindService.find(placeName).toString();
     }
 
     @DeleteMapping("/place/")

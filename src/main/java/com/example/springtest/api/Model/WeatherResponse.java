@@ -3,7 +3,7 @@ package com.example.springtest.api.Model;
 import lombok.*;
 
 @Getter
-@Setter(AccessLevel.PRIVATE)
+@Setter
 @Builder
 @ToString
 public class WeatherResponse {

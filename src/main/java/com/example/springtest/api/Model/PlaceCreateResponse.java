@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter(AccessLevel.PRIVATE)
+@Setter
 @Builder
 public class PlaceCreateResponse {
     private Long id;

@@ -18,8 +18,10 @@ public class WeatherController {
     @PostMapping("/weather")
     public String showWeather(@RequestBody WeatherRequest weatherRequest) {
 
+        System.out.println(weatherRequest.toString());
         String placeName = weatherRequest.getPlace();
         String country = weatherRequest.getCountry();
-        return weatherService.getWeatherResponse(placeName, country).toString();
+        Boolean inFahrenheit = weatherRequest.getInFahrenheit();
+        return weatherService.getWeatherResponse(placeName, country, inFahrenheit).toString();
     }
 }
